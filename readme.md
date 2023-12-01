@@ -32,9 +32,9 @@ Ziel dieser Projektarbeit war es, neben Oracle weitere Datenbankentechnologien k
 
 ### 2.2 Fertiges Container Image aus GitHub-Container-Registry
 1. Container ohne persistentes Volume starten:  
-`docker run -d --name mariadbverein -p 3306:3306 LINK ZUM CONTAINER EINFUEGEN`
+`docker run -d --name mariadbverein -p 3306:3306 ghcr.io/grimnir7/db2-mariadb-verein:latest`
 2. Container mit persistentem Volume starten:  
-`docker run -d --name mariadbverein -v mariadb-volume:/var/lib/mysql -p 3306:3306 LINK ZUM CONTAINER EINFUEGEN`
+`docker run -d --name mariadbverein -v mariadb-volume:/var/lib/mysql -p 3306:3306 ghcr.io/grimnir7/db2-mariadb-verein:latest`
 
 ### 2.3 Mit der Datenbank verbinden
 Damit der Zugriff auf die Datenbank betriebssystemunabhängig erfolgen kann, wird beim build-Prozess des Images der maria-db-client in den Container installiert. So kann aus dem Container mit dem Client auf die DB zugegriffen werden. Wird der Client weggelassen, muss er auf dem Host-Betriebsystem installiert werden, damit mit folgenden Befehlen auf die DB zugegriffen werden kann.  
