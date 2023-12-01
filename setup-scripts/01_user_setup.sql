@@ -9,5 +9,6 @@ CREATE USER 'vereinuser'@'%' IDENTIFIED BY 'vereinuser';
 GRANT ALL PRIVILEGES ON VEREIN_DATABASE.* TO 'vereinuser'@'%';
 
 -- Dem User 'vereinuser' die nötigen Berechtigungen für den Umgang mit der DB erteilen
-GRANT CREATE VIEW ON *.* TO 'vereinuser'@'%'
-GRANT CREATE TEMPORARY TABLES ON *.* TO 'vereinuser'@'%'
+GRANT CREATE VIEW ON *.* TO 'vereinuser'@'%';
+
+GRANT CREATE TEMPORARY TABLES ON *.* TO 'vereinuser'@'%';
