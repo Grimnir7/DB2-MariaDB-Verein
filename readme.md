@@ -22,7 +22,7 @@ Ziel dieser Projektarbeit war es, neben Oracle weitere Datenbankentechnologien k
 ## 2. Manual
 ### 2.1 Container Image selbst gebaut
 1. Repository klonen mit:  
- `git clone <LINK EINFUEGEN>`.
+ `git clone https://github.com/Grimnir7/DB2-MariaDB-Verein.git`.
 2. Image bauen per CLI-Befehl im vorhin geklonten Projektordner ('mariaDB'):  
 `docker build -t mariadb_project_db .`
 3. Container mit selbst gebautem Image auf Port 3306 ohne persistentes Volumen starten:  
