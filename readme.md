@@ -22,7 +22,7 @@ Ziel dieser Projektarbeit war es, neben Oracle weitere Datenbankentechnologien k
 ## 2. Manual
 ### 2.1 Container Image selbst gebaut
 1. Repository klonen mit:  
- `git clone https://github.com/Grimnir7/DB2-MariaDB-Verein.git`.
+ `git clone https://github.com/Grimnir7/DB2-MariaDB-Verein.git`
 2. Image bauen per CLI-Befehl im vorhin geklonten Projektordner ('mariaDB'):  
 `docker build -t mariadb_project_db .`
 3. Container mit selbst gebautem Image auf Port 3306 ohne persistentes Volumen starten:  
@@ -38,7 +38,7 @@ Ziel dieser Projektarbeit war es, neben Oracle weitere Datenbankentechnologien k
 
 ### 2.3 Mit der Datenbank verbinden
 Damit der Zugriff auf die Datenbank betriebssystemunabhängig erfolgen kann, wird beim build-Prozess des Images der maria-db-client in den Container installiert. So kann aus dem Container mit dem Client auf die DB zugegriffen werden. Wird der Client weggelassen, muss er auf dem Host-Betriebsystem installiert werden, damit mit folgenden Befehlen auf die DB zugegriffen werden kann.  
-(Auf Arch-basierten Linux-Distributionen installieren mit: `sudo pacman -S mariadb-clients`.)  
+(Auf Arch-basierten Linux-Distributionen installieren mit: `sudo pacman -S mariadb-clients`)  
   
 Mit installiertem Client kann man sich dann folgendermassen mit der DB verbinden:  
 `mariadb -h localhost -P 3306 -u vereinuser -p`  
@@ -57,7 +57,7 @@ Das Passwort des Users "vereinuser" lautet "vereinuser".
 2. Alle Tabellen anzeigen:  
 `SHOW TABLES;`
 3. Inhalt einer ausgewählten Tabelle anzeigen lassen:  
-`SELECT * FROM <Tabellenname>`
+`SELECT * FROM <Tabellenname>;`
 
 
 ## 3. Improvements to be made
